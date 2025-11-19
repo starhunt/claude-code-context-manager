@@ -62,6 +62,22 @@ chmod +x install.sh
    - Update your `.claude/settings.json` (or create if missing)
    - Make scripts executable
 
+4. **Start Claude Code in tmux**:
+```bash
+# First time: install tmux if not installed
+brew install tmux  # macOS
+# or
+sudo apt-get install tmux  # Linux
+
+# Start tmux session
+tmux
+
+# Run Claude Code inside tmux
+claude
+```
+
+⚠️ **Important**: The auto-restart feature only works when running inside tmux!
+
 ## How It Works
 
 ### Countdown System
@@ -153,12 +169,30 @@ Edit `.claude/settings.json`:
 - **Claude Code**: Latest version
 - **Python 3**: For context-tool-cleaner.py
 - **jq**: JSON processor (auto-installed by installer)
-- **tmux** (optional): For seamless session restart
+- **tmux**: Required for auto-restart feature
+
+### Important: tmux Setup
+For the auto-restart feature to work, you **must**:
+1. Install tmux first
+2. Start Claude Code **inside a tmux session**
+
+```bash
+# Install tmux
+brew install tmux  # macOS
+# or
+sudo apt-get install tmux  # Linux
+
+# Start tmux session
+tmux
+
+# Then run Claude Code inside tmux
+claude
+```
 
 ### Platform Support
 - ✅ macOS (tested)
 - ✅ Linux (tested)
-- ⚠️ Windows: Requires WSL
+- ⚠️ Windows: Requires WSL + tmux
 
 ## Troubleshooting
 
