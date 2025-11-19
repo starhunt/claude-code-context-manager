@@ -23,27 +23,30 @@ After each tool use (Read, Edit, Grep, etc.), the plugin:
 - **Context preserved**: Uses `--continue` flag for instant resume
 
 ### 3. Token Savings
-Real-world example from our tests:
+Real-world example from our production tests:
 ```
 📊 Cleanup Results:
    - Removed Tool Pairs: 134
    - Total Messages Removed: 264
-   - Repaired UUID Links: 99
-   - Message Count: 1037 → 773 (25% reduction!)
+   - Repaired UUID Links: 103
+   - Message Count: 1186 → 922
+   - 🎯 Token Usage: 192k → 103k (46% reduction!)
+
+💡 Another session: 170k → 50k (70% reduction!)
 ```
 
 ## Installation
 
 ### Quick Install
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/claude-code-context-manager/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/professional-ALFIE/claude-code-context-manager/main/install.sh | bash
 ```
 
 ### Manual Install
 1. Clone the repository:
 ```bash
 cd ~/.claude/plugins
-git clone https://github.com/YOUR_USERNAME/claude-code-context-manager.git
+git clone https://github.com/professional-ALFIE/claude-code-context-manager.git
 ```
 
 2. Run the installer:
